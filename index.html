@@ -446,6 +446,8 @@
     border: 1px solid var(--red);
     z-index: -1;
   }
+  
+  /* RED UCSP COMPANIONS GRID */
   .companions-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
@@ -459,10 +461,19 @@
     display: block;
     transition: border-color 0.2s;
   }
-  .companion-card:hover { border-color: var(--border); }
+  .companion-card:not(.no-link):hover { border-color: var(--border); }
   .companion-role { font-family: 'Space Mono', monospace; font-size: 0.62rem; color: var(--red-glow); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.3rem; }
   .companion-name { font-size: 0.85rem; color: var(--text-muted); }
-  .companion-card:hover .companion-name { color: var(--text); }
+  .companion-card:not(.no-link):hover .companion-name { color: var(--text); }
+
+  /* NO-LINK CARDS STYLING */
+  .companion-card.no-link {
+    cursor: default;
+    opacity: 0.55;
+  }
+  .companion-card.no-link:hover {
+    border-color: var(--border-dim);
+  }
 
   @media (prefers-reduced-motion: reduce) {
     .orbit-svg { animation: none; }
@@ -637,18 +648,31 @@
   </div>
   <p style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.95rem;">Docentes y compañeros de Ciencias de la Computación — UCSP Arequipa.</p>
 
-  <!-- DOCENTE -->
-  <p style="font-family:Space Mono,monospace;font-size:0.68rem;color:var(--red-glow);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.75rem;">Docente</p>
+  <!-- DOCENTES -->
+  <p style="font-family:Space Mono,monospace;font-size:0.68rem;color:var(--red-glow);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.75rem;">Docentes & Equipo Académico</p>
   <div class="companions-grid" style="margin-bottom:2rem;">
     <a href="https://www.linkedin.com/in/ecuadrosv/" target="_blank" rel="noopener" class="companion-card">
-      <div class="companion-role">Profesores — LinkedIn</div>
-      <div class="companion-name">Prof. E. Cuadros V.</div>
-      <div class="companion-name">Kristel Gisselle Loayza Cruz</div>
-      <div class="companion-name">Angel Rodriguez Cruz</div>
-      <div class="companion-name">R. Paccotacya Y.</div>
-      <div class="companion-name">Fiorella María Rendón García</div>
+      <div class="companion-role">Director de Escuela / Prof. Principal</div>
+      <div class="companion-name">Dr. Ernesto Cuadros-Vargas</div>
     </a>
+    <div class="companion-card no-link">
+      <div class="companion-role">Docente / JP</div>
+      <div class="companion-name">Kristel Gisselle Loayza Cruz</div>
+    </div>
+    <div class="companion-card no-link">
+      <div class="companion-role">Docente / JP</div>
+      <div class="companion-name">Angel Rodriguez Cruz</div>
+    </div>
+    <div class="companion-card no-link">
+      <div class="companion-role">Docente / JP</div>
+      <div class="companion-name">R. Paccotacya Y.</div>
+    </div>
+    <div class="companion-card no-link">
+      <div class="companion-role">Docente / JP</div>
+      <div class="companion-name">Fiorella María Rendón García</div>
+    </div>
   </div>
+  
   <!-- COMPAÑEROS CON WEB -->
   <p style="font-family:Space Mono,monospace;font-size:0.68rem;color:var(--red-glow);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.75rem;">Compañeros — Portfolio</p>
   <div class="companions-grid">
