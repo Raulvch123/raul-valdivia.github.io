@@ -106,6 +106,7 @@
 
   .hero-inner {
     max-width: 760px;
+    width: 100%;
   }
 
   .hero-eyebrow {
@@ -220,7 +221,7 @@
 
   .section-tag {
     font-family: 'Space Mono', monospace;
-    font-size: 0.7rem;
+    font-size: 0.7 flex;
     color: var(--red-glow);
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -498,18 +499,20 @@
 <section id="hero">
   <div class="hero-inner" style="display:flex;align-items:center;gap:3rem;flex-wrap:wrap;">
     <div class="photo-frame">
-      <img src="raul.jpeg" alt="Raul Valdivia" loading="lazy">
+      <!-- CORREGIDO: Ruta actualizada a perfil.png -->
+      <img src="perfil.png" alt="Raul Valdivia" loading="lazy">
     </div>
     <div>
-    <div class="hero-eyebrow">Arequipa, Perú</div>
-    <h1 class="hero-name">Raul<br><span>Valdivia</span></h1>
-    <p class="hero-role">
-      Estudiante de <strong>Ciencias de la Computación</strong> en UCSP —
-      construyo algoritmos, apps y cosas que aún no tienen nombre.
-    </p>
-    <div class="hero-cta">
-      <a href="#projects" class="btn-primary">Ver proyectos</a>
-      <a href="#contact" class="btn-ghost">Contactar</a>
+      <div class="hero-eyebrow">Arequipa, Perú</div>
+      <h1 class="hero-name">Raul<br><span>Valdivia</span></h1>
+      <p class="hero-role">
+        Estudiante de <strong>Ciencias de la Computación</strong> en UCSP —
+        construyo algoritmos, apps y cosas que aún no tienen nombre.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">Ver proyectos</a>
+        <a href="#contact" class="btn-ghost">Contactar</a>
+      </div>
     </div>
   </div>
 
